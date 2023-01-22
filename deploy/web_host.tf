@@ -1,7 +1,7 @@
 
 resource "google_firebase_web_app" "web_app" {
   provider        = google-beta
-  project         = google_project.read_thai.project_id
+  project         = local.project_id
   display_name    = "Read Thai"
   deletion_policy = "DELETE"
 
