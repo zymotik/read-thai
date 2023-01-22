@@ -5,7 +5,7 @@ resource "google_firebase_web_app" "web_app" {
   display_name    = "Read Thai"
   deletion_policy = "DELETE"
 
-  depends_on = [google_firebase_project.read_thai]
+  depends_on = [google_firebase_project.read_thai, google_project_service.service_firebase]
 }
 
 # data "google_firebase_web_app_config" "web_app" {
